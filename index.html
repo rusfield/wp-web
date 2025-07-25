@@ -1,11 +1,26 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="no">
 <head>
   <meta charset="UTF-8">
-  <title>WillePust</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wille Pust</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>WillePust kommer!</h1>
+  <div class="container">
+    <header>
+      <h1>Wille Pust</h1>
+    </header>
+
+    <nav>
+      <a href="#" onclick="loadPage('hjem')">Hjem</a>
+      <a href="#" onclick="loadPage('kurs')">Kurs</a>
+      <a href="#" onclick="loadPage('behandlinger')">Behandlinger</a>
+    </nav>
+
+    <main id="content">Laster innhold...</main>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
