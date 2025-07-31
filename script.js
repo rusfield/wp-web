@@ -85,10 +85,16 @@ function kalenderInit() {
             var end    = dataTable.getValue(i, 3);  // Col D: End Time
             var status = dataTable.getValue(i, 4);  // Col E: Status
 
+            var startDateTime = populateDate(date, start);
+            var endDateTime = populateDate(date, end);
+
+            console.log(start + " " + startDateTime);
+            console.log(end + " " + endDateTime)
+
             var event = {
               title: title,
-              start: populateDate(date, start),  // FullCalendar will accept Date objects or ISO strings
-              end: populateDate(date, end)
+              start: startDateTime,  
+              end: endDateTime
             };
             if (status === "Avlyst") {
               event.title = "Avlyst: " + event.title;
@@ -111,9 +117,15 @@ function kalenderInit() {
 
 function populateDate(date, timeString) {
   const [hours, minutes] = timeString.split(':').map(Number);
-  date.setHours(hours);
-  date.setMinutes(minutes);
-  date.setSeconds(0);
-  date.setMilliseconds(0);
-  return date;
+
+  // Clone the date
+  const result = new Date(date.getTime());
+
+  // Set time
+  result.setHours(hours);
+  result.setMinutes(minutes);
+  result.setSeconds(0);
+  result.setMilliseconds(0);
+
+  return result;
 }
