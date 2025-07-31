@@ -30,7 +30,9 @@ function kalenderInit() {
     // Initialize FullCalendar after Google API is ready
     var calendarEl = document.getElementById('calendar');
     var calendar = new FullCalendar.Calendar(calendarEl, {
-      initialView: 'timeGridWeek',              // default to week view
+      initialView: 'timeGridWeek',
+      slotMinTime: '06:00:00',
+      slotMaxTime: '23:00:00',
       headerToolbar: {
         left: 'prev,next today',
         center: 'title',
