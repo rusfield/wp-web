@@ -33,6 +33,8 @@ function kalenderInit() {
       initialView: 'timeGridWeek',
       slotMinTime: '06:00:00',
       slotMaxTime: '23:00:00',
+      weekNumbers: true,
+      weekText: "Uke",
       headerToolbar: {
         left: 'prev,next today',
         center: 'title',
