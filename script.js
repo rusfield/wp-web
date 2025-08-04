@@ -53,7 +53,7 @@ function kalenderInit() {
       locale: 'nb',                             // Norwegian locale for text
       editable: false,                         // make events read-only (no drag/drop):contentReference[oaicite:9]{index=9}
       allDaySlot: false,                       // no "all-day" section, only timed events:contentReference[oaicite:10]{index=10}
-
+      firstDay: 1,
       events: function(fetchInfo, successCallback, failureCallback) {
         // Prepare date range from fetchInfo
         var startDate = fetchInfo.start;  // beginning of calendar view range
