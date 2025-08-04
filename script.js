@@ -51,7 +51,6 @@ function kalenderInit() {
         day: "Dag"
       },
       locale: 'nb',                             // Norwegian locale for text
-      timeZone: 'Europe/Oslo',                  // display times in Oslo time zone
       editable: false,                         // make events read-only (no drag/drop):contentReference[oaicite:9]{index=9}
       allDaySlot: false,                       // no "all-day" section, only timed events:contentReference[oaicite:10]{index=10}
 
@@ -90,9 +89,6 @@ function kalenderInit() {
             var startDateTime = populateDate(date, start);
             var endDateTime = populateDate(date, end);
 
-            console.log(start + " " + startDateTime);
-            console.log(end + " " + endDateTime)
-
             var event = {
               title: title,
               start: startDateTime,  
@@ -122,6 +118,7 @@ function populateDate(date, timeString) {
 
   // Clone the date
   const result = new Date(date.getTime());
+
 
   // Set time
   result.setHours(hours);
