@@ -124,7 +124,6 @@ footer {
 
 .image-circle-fade {
   width: 200px;
-  /* Or any desired size */
   height: 200px;
   border-radius: 50%;
   object-fit: cover;
@@ -209,7 +208,10 @@ footer {
 
   .portrait-quote>div>img {
     align-self: flex-end;
-    height: 40px;
-    width: 40px;
+  }
+
+  .image-circle-fade {
+    width: 80px;
+    height: 80px;
   }
 }
