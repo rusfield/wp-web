@@ -24,7 +24,7 @@ body {
 }
 
 /* On small screens, make it full width */
-@media (max-width: 767px) {
+@media (max-width: 1040px) {
   .container {
     max-width: 100%;
     margin: 0;
@@ -68,6 +68,7 @@ nav {
   margin-bottom: 20px;
   border-bottom: 1px solid #ccc;
   padding-bottom: 10px;
+  max-width: 100%;
 }
 
 nav a {
