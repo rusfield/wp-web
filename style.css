@@ -31,7 +31,21 @@ body {
     box-shadow: none;
   }
 
+  header {
+    flex-direction: column;
+  }
 
+  header h1 {
+    order: -1;
+    /* Move the h1 to the top */
+    width: 100%;
+  }
+
+  header img {
+    width: 40%;
+    /* Adjust as needed */
+    height: auto;
+  }
 
   /* Calendar on small screen */
   .fc-header-toolbar {
@@ -59,6 +73,12 @@ header {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+header>* {
+  margin: 5px;
 }
 
 nav {
@@ -68,7 +88,7 @@ nav {
   margin-bottom: 20px;
   border-bottom: 1px solid #ccc;
   padding-bottom: 10px;
-  max-width: 100%;
+  overflow: hidden;
 }
 
 nav a {
@@ -105,14 +125,15 @@ footer {
 }
 
 .image-circle-fade {
-  width: 200px; /* Or any desired size */
+  width: 200px;
+  /* Or any desired size */
   height: 200px;
   border-radius: 50%;
   object-fit: cover;
 
   /* Fadeout effect using mask */
-  -webkit-mask-image: radial-gradient(circle, rgba(0,0,0,1) 60%, rgba(0,0,0,0) 100%);
-  mask-image: radial-gradient(circle, rgba(0,0,0,1) 60%, rgba(0,0,0,0) 100%);
+  -webkit-mask-image: radial-gradient(circle, rgba(0, 0, 0, 1) 60%, rgba(0, 0, 0, 0) 100%);
+  mask-image: radial-gradient(circle, rgba(0, 0, 0, 1) 60%, rgba(0, 0, 0, 0) 100%);
 
   -webkit-mask-size: cover;
   mask-size: cover;
@@ -129,17 +150,17 @@ footer {
   box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.1);
 }
 
-.portrait-quote > div {
+.portrait-quote>div {
   display: flex;
   flex-direction: column;
   gap: 8px;
 }
 
-.portrait-quote > div > span {
+.portrait-quote>div>span {
   margin-left: 16px;
 }
 
-.portrait-quote > div > img {
+.portrait-quote>div>img {
   align-self: flex-end;
 }
 
