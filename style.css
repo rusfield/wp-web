@@ -23,12 +23,75 @@ body {
   flex-direction: column;
 }
 
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 10px;
+  overflow: hidden;
+}
+
+nav a {
+  text-decoration: none;
+  color: #2a4d38;
+  font-weight: bold;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* Hide the menu toggle on desktop */
+#menuToggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 30px;
+  color: #2a4d38;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.portrait-quote {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 30px 5%;
+  padding: 20px;
+  gap: 20px;
+  border-radius: 20px;
+  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.1);
+}
+
+.portrait-quote>div {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.portrait-quote>div>img {
+  align-self: flex-end;
+}
+
+.tab-img {
+  align-self: center;
+  padding: 30px;
+}
+
+
+
 /* On small screens, make it full width */
 @media (max-width: 1040px) {
   .container {
     max-width: 100%;
     margin: 0;
     box-shadow: none;
+  }
+
+  main {
+    padding: 20px 0;
   }
 
   header {
@@ -63,6 +126,30 @@ body {
     text-align: center;
     margin-bottom: 0.5em;
   }
+
+  #menuToggle {
+    display: block;
+  }
+
+  nav {
+    flex-direction: column;
+    align-items: center;
+    display: none;
+  }
+
+  nav.show {
+    display: flex;
+  }
+
+  nav a {
+    padding: 10px 0;
+  }
+
+  .portrait-quote {
+    margin: 30px 0;
+    padding: 20px 0;
+
+  }
 }
 
 header {
@@ -79,26 +166,6 @@ header {
 
 header>* {
   margin: 5px;
-}
-
-nav {
-  display: flex;
-  justify-content: center;
-  gap: 30px;
-  margin-bottom: 20px;
-  border-bottom: 1px solid #ccc;
-  padding-bottom: 10px;
-  overflow: hidden;
-}
-
-nav a {
-  text-decoration: none;
-  color: #2a4d38;
-  font-weight: bold;
-}
-
-nav a:hover {
-  text-decoration: underline;
 }
 
 main {
@@ -137,34 +204,4 @@ footer {
 
   -webkit-mask-size: cover;
   mask-size: cover;
-}
-
-.portrait-quote {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin: 30px 5%;
-  padding: 20px;
-  gap: 20px;
-  border-radius: 20px;
-  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.1);
-}
-
-.portrait-quote>div {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-}
-
-.portrait-quote>div>span {
-  margin-left: 16px;
-}
-
-.portrait-quote>div>img {
-  align-self: flex-end;
-}
-
-.tab-img {
-  align-self: center;
-  padding: 30px;
 }
