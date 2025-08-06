@@ -120,6 +120,26 @@ h3+ul {
 
 footer {
   margin: 0 -20px -20px -20px;
+  position: relative;
+  font-weight: bold;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 8px;
+}
+
+footer::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url('img/footer.jpeg');
+  background-size: cover;
+  opacity: 0.7; /* Adjust transparency here */
+}
+
+footer > * {
+  color: white;
+  z-index: 1;
 }
 
 .image-circle-fade {
@@ -214,4 +234,6 @@ footer {
     width: 80px;
     height: 80px;
   }
+
+
 }
