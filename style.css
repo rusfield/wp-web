@@ -1,18 +1,26 @@
+html {
+  height: 100%;
+  scrollbar-gutter: stable;
+}
+
 body {
   font-family: 'Segoe UI', sans-serif;
   margin: 0;
   background: #f6f6f6;
   color: #333;
+  height: 100%;
 }
 
 .container {
-  max-width: 700px;
+  max-width: 1040px;
   margin: 0 auto;
   padding: 20px;
   background: white;
   min-height: 100vh;
   box-sizing: border-box;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
 }
 
 /* On small screens, make it full width */
@@ -50,7 +58,7 @@ header {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  align-items: end;
+  align-items: center;
 }
 
 nav {
@@ -73,9 +81,10 @@ nav a:hover {
 }
 
 main {
-  padding: 10px;
+  padding: 20px 10px;
   display: flex;
   flex-direction: column;
+  flex: 1;
 }
 
 h3::before {
@@ -87,5 +96,53 @@ h3+ul {
 }
 
 .fc-col-header-cell-cushion {
-    text-transform: capitalize;
+  text-transform: capitalize;
+}
+
+footer {
+  margin: 0 -20px -20px -20px;
+}
+
+.image-circle-fade {
+  width: 200px; /* Or any desired size */
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+
+  /* Fadeout effect using mask */
+  -webkit-mask-image: radial-gradient(circle, rgba(0,0,0,1) 60%, rgba(0,0,0,0) 100%);
+  mask-image: radial-gradient(circle, rgba(0,0,0,1) 60%, rgba(0,0,0,0) 100%);
+
+  -webkit-mask-size: cover;
+  mask-size: cover;
+}
+
+.portrait-quote {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 30px 5%;
+  padding: 20px;
+  gap: 20px;
+  border-radius: 20px;
+  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.1);
+}
+
+.portrait-quote > div {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.portrait-quote > div > span {
+  margin-left: 16px;
+}
+
+.portrait-quote > div > img {
+  align-self: flex-end;
+}
+
+.tab-img {
+  align-self: center;
+  padding: 30px;
 }
