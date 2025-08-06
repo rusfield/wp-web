@@ -73,6 +73,8 @@ nav a:hover {
 
 .portrait-quote>div>img {
   align-self: flex-end;
+  height: 200px;
+  width: 200px;
 }
 
 .tab-img {
@@ -80,6 +82,60 @@ nav a:hover {
   padding: 30px;
 }
 
+
+header {
+  padding: 20px 10px;
+  background: #dbe7dd;
+  margin: -20px -20px 20px -20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+header>* {
+  margin: 5px;
+}
+
+main {
+  padding: 20px 10px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+h3::before {
+  content: '🌿';
+}
+
+h3+ul {
+  margin-top: 0;
+}
+
+.fc-col-header-cell-cushion {
+  text-transform: capitalize;
+}
+
+footer {
+  margin: 0 -20px -20px -20px;
+}
+
+.image-circle-fade {
+  width: 200px;
+  /* Or any desired size */
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+
+  /* Fadeout effect using mask */
+  -webkit-mask-image: radial-gradient(circle, rgba(0, 0, 0, 1) 60%, rgba(0, 0, 0, 0) 100%);
+  mask-image: radial-gradient(circle, rgba(0, 0, 0, 1) 60%, rgba(0, 0, 0, 0) 100%);
+
+  -webkit-mask-size: cover;
+  mask-size: cover;
+}
 
 
 /* On small screens, make it full width */
@@ -146,62 +202,14 @@ nav a:hover {
   }
 
   .portrait-quote {
-    margin: 30px 0;
-    padding: 20px 0;
+    margin: 30px -20px;
+    border-radius: 0;
 
   }
-}
 
-header {
-  padding: 20px 10px;
-  background: #dbe7dd;
-  margin: -20px -20px 20px -20px;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  text-align: center;
-}
-
-header>* {
-  margin: 5px;
-}
-
-main {
-  padding: 20px 10px;
-  display: flex;
-  flex-direction: column;
-  flex: 1;
-}
-
-h3::before {
-  content: '🌿';
-}
-
-h3+ul {
-  margin-top: 0;
-}
-
-.fc-col-header-cell-cushion {
-  text-transform: capitalize;
-}
-
-footer {
-  margin: 0 -20px -20px -20px;
-}
-
-.image-circle-fade {
-  width: 200px;
-  /* Or any desired size */
-  height: 200px;
-  border-radius: 50%;
-  object-fit: cover;
-
-  /* Fadeout effect using mask */
-  -webkit-mask-image: radial-gradient(circle, rgba(0, 0, 0, 1) 60%, rgba(0, 0, 0, 0) 100%);
-  mask-image: radial-gradient(circle, rgba(0, 0, 0, 1) 60%, rgba(0, 0, 0, 0) 100%);
-
-  -webkit-mask-size: cover;
-  mask-size: cover;
+  .portrait-quote>div>img {
+    align-self: flex-end;
+    height: 80px;
+    width: 80px;
+  }
 }
