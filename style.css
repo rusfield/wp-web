@@ -209,7 +209,7 @@ footer {
 
   .portrait-quote>div>img {
     align-self: flex-end;
-    height: 80px;
-    width: 80px;
+    height: 40px;
+    width: 40px;
   }
 }
