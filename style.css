@@ -158,7 +158,7 @@ footer > * {
   mask-size: cover;
 }
 
-h4 {
+h2 {
   padding-top: 40px;
 }
 
@@ -173,7 +173,7 @@ h4 {
 
   header {
     flex-direction: column;
-    
+
   }
 
   main {
