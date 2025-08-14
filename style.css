@@ -84,7 +84,7 @@ nav a:hover {
 
 
 header {
-  padding: 20px 10px;
+  padding: 0 10px;
   background: #dbe7dd;
   margin: -20px -20px 20px -20px;
   display: flex;
@@ -126,6 +126,7 @@ footer {
   flex-direction: column;
   gap: 2px;
   padding: 8px;
+  align-items: flex-end;
 }
 
 footer::before {
@@ -167,22 +168,6 @@ footer > * {
 
   main {
     padding: 20px 0;
-  }
-
-  header {
-    flex-direction: column;
-  }
-
-  header h1 {
-    order: -1;
-    /* Move the h1 to the top */
-    width: 100%;
-  }
-
-  header img {
-    width: 40%;
-    /* Adjust as needed */
-    height: auto;
   }
 
   /* Calendar on small screen */
