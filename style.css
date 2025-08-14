@@ -127,6 +127,7 @@ footer {
   gap: 2px;
   padding: 8px;
   align-items: flex-end;
+  height: 180px;
 }
 
 footer::before {
@@ -157,6 +158,10 @@ footer > * {
   mask-size: cover;
 }
 
+h4 {
+  padding-top: 40px;
+}
+
 
 /* On small screens, make it full width */
 @media (max-width: 1040px) {
@@ -164,6 +169,11 @@ footer > * {
     max-width: 100%;
     margin: 0;
     box-shadow: none;
+  }
+
+  header {
+    flex-direction: column;
+    
   }
 
   main {
