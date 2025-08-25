@@ -28,7 +28,7 @@ function kalenderInit() {
     // Initialize FullCalendar after Google API is ready
     var calendarEl = document.getElementById('calendar');
     var calendar = new FullCalendar.Calendar(calendarEl, {
-      initialView: 'timeGridWeek',
+      initialView: 'dayGridMonth',
       slotMinTime: '06:00:00',
       slotMaxTime: '23:00:00',
       weekNumbers: true,
@@ -98,6 +98,7 @@ function kalenderInit() {
               event.title = "Avlyst: " + event.title;
               event.color = "red";
             }
+
             // (If status is "Active", we leave the default color)
             events.push(event);
 
