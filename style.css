@@ -136,10 +136,11 @@ footer::before {
   inset: 0;
   background-image: url('img/footer.jpeg');
   background-size: cover;
-  opacity: 0.7; /* Adjust transparency here */
+  opacity: 0.7;
+  /* Adjust transparency here */
 }
 
-footer > * {
+footer>* {
   color: white;
   z-index: 1;
 }
@@ -160,6 +161,10 @@ footer > * {
 
 h2 {
   padding-top: 40px;
+}
+
+#spenst-logo {
+  padding-right: 50px;
 }
 
 
@@ -230,5 +235,7 @@ h2 {
     height: 80px;
   }
 
-
+  #spenst-logo {
+    padding-right: 0;
+  }
 }

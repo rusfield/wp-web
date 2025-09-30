@@ -11,13 +11,13 @@
 <body>
   <div class="container">
     <header>
-      <img src="/img/logo.svg" height="160px" alt="logo" />
-      <img src="/img/spenst-white.png" height="20px" alt="logo" />
+      <a href="#" onclick="loadPage('hjem')">
+        <img src="/img/logo.svg" height="160px" alt="logo" />
+      </a>
+      <img src="/img/spenst-white.png" height="40px" alt="logo" id="spenst-logo" />
     </header>
     <button id="menuToggle" aria-label="Toggle menu" onclick="menuToggle()">☰</button>
     <nav id="mainNav">
-      <a href="#" onclick="loadPage('hjem')">HJEM</a>
-      <a href="#" onclick="loadPage('om')">OM TRINE</a>
       <a href="#" onclick="loadPage('tilbud')">TILBUD</a>
       <a href="#" onclick="loadPage('besok')">BEDRIFTSBESØK</a>
       <a href="#" onclick="loadPage('priser')">PRISER og DROPIN</a>
