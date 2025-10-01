@@ -167,6 +167,11 @@ h2 {
   padding-right: 50px;
 }
 
+.img-text {
+  max-width: 50%;
+  float: right;
+  padding: 0 40px;
+}
 
 /* On small screens, make it full width */
 @media (max-width: 1040px) {
