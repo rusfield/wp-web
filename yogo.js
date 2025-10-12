@@ -1,3 +1,4 @@
+/* https://docs.yogobooking.com/no-no/yogo-guide-for-oppsett-av-widgets-p%C3%A5-nettsiden-din */
 
 var YOGO_CONVERT_TEXT_TAGS_TO_HTML = true;
 var YOGO_PARSE_HTML_CONTINUOUSLY = true;
