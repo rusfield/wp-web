@@ -207,6 +207,22 @@ h2 {
   border-radius: 6px;
 }
 
+.content-with-image {
+  display: flex;
+  gap: 1rem;
+    align-items: flex-start;
+
+}
+
+.text-content {
+  flex: 1;
+}
+
+.image-content {
+  align-self: center;
+}
+
+
 /* On small screens, make it full width */
 @media (max-width: 1040px) {
   .container {
@@ -290,5 +306,13 @@ h2 {
 
   .media-container img:hover {
     transform: none;
+  }
+
+  .content-with-image {
+    flex-direction: column;
+  }
+
+  .image-content {
+      flex-grow: 1;
   }
 }
