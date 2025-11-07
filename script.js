@@ -1,3 +1,6 @@
+const overlay = document.getElementById("overlay");
+const overlayImg = document.getElementById("overlay-img");
+
 function loadPage(page) {
   fetch(`pages/${page}.html`)
     .then(res => {
@@ -12,6 +15,9 @@ function loadPage(page) {
       if (typeof window[page + 'Init'] === 'function') {
         window[page + 'Init']();
       }
+
+      prepareImages();
+
     });
 }
 
@@ -192,10 +198,10 @@ function hasDuplicate(evts, ev) {
     ) {
       return true;
     }
-    else if(otherTitle === normTitle){
-          console.log("Comparing " + normTitle + " to " + otherTitle);
-          console.log(new Date(evts[i].start));
-          console.log(new Date(ev.start));
+    else if (otherTitle === normTitle) {
+      console.log("Comparing " + normTitle + " to " + otherTitle);
+      console.log(new Date(evts[i].start));
+      console.log(new Date(ev.start));
     }
   }
   return false;
@@ -266,3 +272,17 @@ window.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
+
+
+function prepareImages() {
+  document.querySelectorAll(".media-img").forEach(img => {
+    img.addEventListener("click", () => {
+      overlayImg.src = img.src;
+      overlay.style.display = "flex";
+    });
+  });
+
+  overlay.addEventListener("click", () => {
+    overlay.style.display = "none";
+  });
+}

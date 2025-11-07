@@ -173,6 +173,40 @@ h2 {
   padding: 0 40px;
 }
 
+.media-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+.media-container img {
+  width: 100%;
+  max-width: 300px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.media-container img:hover {
+  transform: scale(1.05);
+}
+
+.overlay {
+  position: fixed;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 9999;
+}
+
+.overlay img {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 6px;
+}
+
 /* On small screens, make it full width */
 @media (max-width: 1040px) {
   .container {
@@ -242,5 +276,19 @@ h2 {
 
   #spenst-logo {
     padding-right: 0;
+  }
+
+  .media-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .media-container img {
+    max-width: 100%;
+    pointer-events: none;
+  }
+
+  .media-container img:hover {
+    transform: none;
   }
 }
