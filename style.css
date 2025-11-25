@@ -222,6 +222,12 @@ h2 {
   align-self: center;
 }
 
+.click-here {
+    color: #658C6A;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
 
 /* On small screens, make it full width */
 @media (max-width: 1040px) {
